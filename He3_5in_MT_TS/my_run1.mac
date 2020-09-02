@@ -1,0 +1,23 @@
+# Macro file for my He3
+# 2" moderator thickness
+
+
+/run/initialize
+/tracking/verbose 0
+
+# list the existing physics processes
+/process/list
+
+# isotropic neutrons 10MeV
+/gps/particle neutron
+/gps/pos/centre 0 0 -36.5 mm
+#/gps/ang/mintheta 0 deg
+
+/gps/pos/type Point
+/gps/ang/type iso
+#/gps/ene/type Mono
+/gps/ene/mono 1.00E-10 MeV
+#/gps/energy 10 MeV
+/run/printProgress 10000
+/analysis/setFileName He3_50p8mm_1E-10Mev
+/run/beamOn 1000000
